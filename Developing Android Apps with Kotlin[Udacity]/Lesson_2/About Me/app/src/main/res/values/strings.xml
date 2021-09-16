@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">About Me</string>
+    <string name="name">Aleks Haecky</string>
+    <string name="yellow_star">Yellow star</string>
+    <string name="bio">Hi! My name is Aleks.
+    Unlike Darwin, many evolutionists of the late 19th and early 20th centuries had theorized that the human family tree was rooted in Asia.
+Some argued that Asia’s gibbons were our closest living relatives. Others reasoned that tectonic activity and climate change in Central Asia sparked human evolution.
+One naturalist even proposed that human origins traced back to a lost continent that had sunk in the Indian Ocean, forcing our ancestors to relocate to Southeast Asia.
+And that’s where the best contender for an early human ancestor had been found.
+In the 1890s, a crew led by Dutch physician-turned-anthropologist Eugène Dubois had uncovered a skullcap and thigh bone on the Indonesian island of Java.}The thick skullcap had heavy brow ridges, but Dubois estimated it once held a brain that was about twice as big as an ape’s and approaching the size of a human’s.
+The thigh bone indicated that this Java Man, later named Homo erectus, walked upright.
+Europe had its own tantalizing fossils. Neandertals had been known since the mid-19th century, but by the early 20th century, they were generally thought to be cousins that lived too recently to shed much light on our early evolution.
+A more relevant discovery seemed to come in 1912, when an amateur archaeologist had recovered humanlike bones from near Piltdown, England; the site also contained fossils of extinct creatures, suggesting Piltdown Man was of great antiquity.
+Skull bones hinted he had a human-sized brain, but his primitive jaw had a large, apelike canine tooth.
+Some experts questioned whether the skull and jaw belonged together. But British scientists embraced the discovery — and not just because it implied England had a role in human origins.
+
+ </string>
+    <string name="what_is_your_nickname">What is your nickname?</string>
+    <string name="done">Done</string>
+</resources>
