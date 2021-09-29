@@ -7,7 +7,7 @@ android {
     compileSdk 30
 
     defaultConfig {
-        applicationId "com.example.diceroller"
+        applicationId "com.example.happybirthday"
         minSdk 23
         targetSdk 30
         versionCode 1
