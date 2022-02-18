@@ -1,4 +1,5 @@
-Android Bootcamp için yapmış olduğum sadece toplama işlemi gerçekleştiren basit hesap makinesi.
+Android Bootcamp için yapmış olduğum, sadece toplama işlemi gerçekleştiren basit bir hesap makinesi.
+
 
 ![Calculator-lightmode-landscape](https://user-images.githubusercontent.com/83539143/154764680-559ebe85-c894-46aa-a0fe-2af246af3662.PNG)
 ![Calculator-lightmode-portrait](https://user-images.githubusercontent.com/83539143/154764687-6a58ecce-7597-4b01-b177-4d3f705a570f.PNG)
