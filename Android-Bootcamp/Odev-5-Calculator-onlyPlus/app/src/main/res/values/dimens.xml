@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    //portrait mode dimens:
+    <dimen name="result_card_number_size">24sp</dimen>
+    <dimen name="button_number_size">20sp</dimen>
+    <dimen name="result_card_content_padding">10sp</dimen>
+    <dimen name="button_width">80dp</dimen>
+    <dimen name="button_height">75dp</dimen>
+    <dimen name="button_corner_radius">20dp</dimen>
+    <dimen name="button_corner_stroke_width">2dp</dimen>
+
+    //landspace mode dimens:
+    <dimen name="result_card_number_size_l">24sp</dimen>
+    <dimen name="button_number_size_l">20sp</dimen>
+    <dimen name="result_card_content_padding_l">10sp</dimen>
+    <dimen name="button_width_l">80dp</dimen>
+    <dimen name="button_height_l">55dp</dimen>
+    <dimen name="button_corner_radius_l">20dp</dimen>
+    <dimen name="button_corner_stroke_width_l">2dp</dimen>
+</resources>

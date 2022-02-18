@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    //app colors:
+    <color name="bg_color">#0B0B0B</color>
+    <color name="card_bg_color">#36383A</color>
+    <color name="result_text_color">#FFFFFF</color>
+    <color name="button_bg_color">#172025</color>
+    <color name="button_text_color">#000000</color>
+    <color name="button_stroke_color">#420000</color>
+</resources>
