@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">JetpackNavigationComponent</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="log_in">Log in</string>
+    <string name="sign_up">Sign up</string>
+    <string name="login">Login</string>
+    <string name="signup">Signup</string>
+    <string name="log_in_screen">Log in Screen</string>
+    <string name="mail_verify_screen">Mail Verify Screen</string>
+    <string name="verify">Verify</string>
+    <string name="confirmation_screen">Confirmation Screen</string>
+</resources>
