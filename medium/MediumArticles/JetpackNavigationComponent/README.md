@@ -1,6 +1,12 @@
 
 Senaryolar:
+
+1.Senaryo:
+
 ![7](https://user-images.githubusercontent.com/83539143/154976548-ac1b910c-4752-4ccc-b04a-77f2b33f74a6.PNG)
+
+2.Senaryo:
+
 ![8](https://user-images.githubusercontent.com/83539143/154976562-f21aca9d-bab0-4912-97a1-885a02998e0c.PNG)
 
 
