@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <SearchView
+        android:id="@+id/menu_search_bar"
+        android:queryHint="Mağazada ara "
+        android:iconifiedByDefault="false"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="#F4F4F4"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar_menu" />
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_menu"
+        style="@style/TextAppearance.AppCompat.Display1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="?attr/actionBarSize"
+        android:paddingEnd="20dp"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title=""
+        tools:ignore="RtlSymmetry">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|end"
+            tools:layout_editor_absoluteX="116dp"
+            tools:layout_editor_absoluteY="12dp">
+
+
+            <ImageView
+
+                android:id="@+id/imageViewLogo"
+                android:layout_width="180dp"
+                android:layout_height="38dp"
+                android:scaleType="fitCenter"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.4"
+                app:srcCompat="@drawable/exlogo_bgremove"
+                android:contentDescription="TODO" />
+
+            <TextView
+                android:id="@+id/teslimat_baslikTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/teslimat_adresi"
+                android:textColor="#757575"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toTopOf="@+id/teslimat_oku"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/teslimat_yeriTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/ev"
+                android:textColor="#353535"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="@+id/teslimat_oku"
+                app:layout_constraintEnd_toStartOf="@+id/teslimat_oku"
+                app:layout_constraintTop_toTopOf="@+id/teslimat_oku" />
+
+            <ImageView
+                android:id="@+id/teslimat_oku"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/todo"
+                android:src="@drawable/down_arrow"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:srcCompat="@drawable/down_arrow"
+                app:tint="@color/BottomNav_clickedcolor"
+                tools:srcCompat="@drawable/down_arrow" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_nav_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:itemHorizontalTranslationEnabled="false"
+        app:labelVisibilityMode="labeled"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/bottomnav_menu">
+
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+    <com.google.android.material.chip.ChipGroup
+        android:id="@+id/chipGroup"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:chipSpacingHorizontal="0dp"
+        app:layout_constraintBottom_toTopOf="@id/rv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/menu_search_bar"
+        app:singleLine="true"
+        app:singleSelection="true">
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip1"
+            style="@style/ChipStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dp"
+            android:padding="5dp"
+            android:text="Market"
+            android:textAlignment="center"
+            android:textSize="14sp"
+            app:chipEndPadding="10dp"
+            app:chipMinTouchTargetSize="0dp"
+            app:chipStartPadding="10dp"
+            app:chipStrokeColor="@color/material_dynamic_neutral60"
+            app:chipStrokeWidth="1dp"
+            app:textEndPadding="3dp"
+            app:textStartPadding="3dp" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip2"
+            style="@style/ChipStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dp"
+            android:padding="5dp"
+            android:text="Yemek"
+            android:textAlignment="center"
+            android:textSize="14sp"
+            app:chipEndPadding="10dp"
+            app:chipMinTouchTargetSize="0dp"
+            app:chipStartPadding="10dp"
+            app:chipStrokeColor="@color/material_dynamic_neutral60"
+            app:chipStrokeWidth="1dp"
+            app:textEndPadding="3dp"
+            app:textStartPadding="3dp" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip3"
+            style="@style/ChipStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dp"
+            android:padding="5dp"
+            android:text="Çiçek"
+            android:textAlignment="center"
+            android:textSize="14sp"
+            app:chipEndPadding="10dp"
+            app:chipMinTouchTargetSize="0dp"
+            app:chipStartPadding="10dp"
+            app:chipStrokeColor="@color/material_dynamic_neutral60"
+            app:chipStrokeWidth="1dp"
+            app:textEndPadding="3dp"
+            app:textStartPadding="3dp" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip4"
+            style="@style/ChipStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dp"
+            android:padding="5dp"
+            android:text="Su"
+            android:textAlignment="center"
+            android:textSize="14sp"
+            app:chipEndPadding="10dp"
+            app:chipMinTouchTargetSize="0dp"
+            app:chipStartPadding="10dp"
+            app:chipStrokeColor="@color/material_dynamic_neutral60"
+            app:chipStrokeWidth="1dp"
+            app:textEndPadding="3dp"
+            app:textStartPadding="3dp" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip5"
+            style="@style/ChipStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dp"
+            android:padding="5dp"
+            android:text="Kişisel Bakım"
+            android:textAlignment="center"
+            android:textSize="14sp"
+            app:chipEndPadding="10dp"
+            app:chipMinTouchTargetSize="0dp"
+            app:chipStartPadding="10dp"
+            app:chipStrokeColor="@color/material_dynamic_neutral60"
+            app:chipStrokeWidth="1dp"
+            app:textEndPadding="3dp"
+            app:textStartPadding="3dp" />
+    </com.google.android.material.chip.ChipGroup>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintBottom_toTopOf="@id/bottom_nav_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/chipGroup" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

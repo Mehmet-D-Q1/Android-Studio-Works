@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+
+        android:icon="@drawable/ic_expressassetex_1"
+        android:title="Ana sayfa" />
+    <item
+        android:icon="@drawable/ic_expressassetcart"
+        android:title="Siparişlerim" />
+    <item
+        android:icon="@drawable/ic_expressassetsepet"
+        android:title="Sepetim" />
+    <item
+        android:icon="@drawable/ic_expressassetchathelp"
+        android:title="Canlı yardım" />
+    <item
+        android:icon="@drawable/ic_expressassethepsiburada"
+        android:title="Hepsiburada" />
+</menu>
