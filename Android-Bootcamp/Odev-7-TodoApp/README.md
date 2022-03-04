@@ -1,4 +1,4 @@
-Android Bootcamp yapmış olduğum ToDo app ödevi.
+Android Bootcamp için yapmış olduğum ToDo app ödevi.
 
 MVVM(ViewModel - LiveData)
 
