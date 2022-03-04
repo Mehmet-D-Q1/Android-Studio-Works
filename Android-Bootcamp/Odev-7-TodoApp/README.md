@@ -9,4 +9,5 @@ RecyclerView
 RoomDatabase
 
 
-![TodoApp](https://user-images.githubusercontent.com/83539143/156785093-19c425e7-104d-4e21-81d7-bb99d4ac4115.png)
+
+![TodoApp](https://user-images.githubusercontent.com/83539143/156785719-8bd49c8f-48db-487b-91ce-d95c0247bdbd.png)
