@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="foodsDetailFragment"
+            type="com.example.finalproject_foodos.fragments.FoodsDetailFragment" />
+        <variable
+            name="foodDetailObject"
+            type="com.example.finalproject_foodos.entity.Foods" />
+        <variable
+            name="userName"
+            type="String" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/shape_detail_1"
+        tools:context=".fragments.FoodsDetailFragment">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbarDetail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_toolbar_detail"
+            android:elevation="5dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:menu="@menu/uppbar_menu_detail"
+            app:title="Food Details"
+            app:titleTextColor="#5A82A1" />
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout"
+            android:layout_width="match_parent"
+            android:layout_height="175dp"
+            android:layout_marginTop="358dp"
+            android:background="@drawable/shape_detail_2"
+            android:elevation="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0">
+
+            <TextView
+                android:id="@+id/textViewFoodNameInDetail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:fontFamily="@font/adamina"
+                android:text="@{foodDetailObject.yemekAdi}"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/buttonAddInDetail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="150dp"
+                android:width="25dp"
+                android:height="25dp"
+                android:backgroundTint="#5A82A1"
+                android:clickable="true"
+                android:includeFontPadding="false"
+                android:insetLeft="0dp"
+                android:insetTop="0dp"
+                android:insetRight="0dp"
+                android:insetBottom="0dp"
+                android:maxWidth="0dp"
+                android:minWidth="0dp"
+                android:minHeight="0dp"
+                android:nestedScrollingEnabled="false"
+                android:padding="0dp"
+                android:textAlignment="center"
+                app:cornerRadius="30dp"
+                app:icon="@drawable/add_icon"
+                app:iconGravity="textStart"
+                app:iconPadding="0dp"
+                app:layout_constrainedWidth="false"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/textViewQuantityInDetail"
+                app:layout_constraintTop_toBottomOf="@+id/textViewFoodNameInDetail" />
+
+            <Button
+                android:id="@+id/buttonSubtractInDetail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="150dp"
+                android:width="25dp"
+                android:height="25dp"
+                android:backgroundTint="#5A82A1"
+                android:clickable="true"
+                android:includeFontPadding="false"
+                android:insetLeft="0dp"
+                android:insetTop="0dp"
+                android:insetRight="0dp"
+                android:insetBottom="0dp"
+                android:maxWidth="0dp"
+                android:minWidth="0dp"
+                android:minHeight="0dp"
+                android:nestedScrollingEnabled="false"
+                android:padding="0dp"
+                android:textAlignment="center"
+                app:cornerRadius="30dp"
+                app:icon="@drawable/subtract_icon"
+                app:iconGravity="textStart"
+                app:iconPadding="0dp"
+                app:layout_constrainedWidth="false"
+                app:layout_constraintBottom_toBottomOf="@+id/textViewQuantityInDetail"
+                app:layout_constraintEnd_toStartOf="@+id/textViewQuantityInDetail"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/textViewQuantityInDetail" />
+
+            <TextView
+                android:id="@+id/textViewQuantityInDetail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:fontFamily="@font/adamina"
+                android:text="1"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="@+id/buttonSubtractInDetail"
+                app:layout_constraintEnd_toStartOf="@+id/buttonAddInDetail"
+                app:layout_constraintStart_toEndOf="@+id/buttonSubtractInDetail"
+                app:layout_constraintTop_toTopOf="@+id/buttonAddInDetail" />
+
+            <Button
+                android:id="@+id/buttonAddToCardInDetail"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="9dp"
+                android:backgroundTint="#5A82A1"
+                android:fontFamily="@font/adamina"
+                android:text="Add to Card"
+                android:onClick="@{() -> foodsDetailFragment.addToCardWithSnackBar(foodDetailObject.yemekAdi, foodDetailObject.yemekResimAdi, foodDetailObject.yemekFiyat, Integer.parseInt(textViewQuantityInDetail.getText().toString()), userName )}"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.498"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewQuantityInDetail" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <ImageView
+            android:id="@+id/imageViewFoodImageInDetail"
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:background="@drawable/shape_image_detail"
+            android:clipToOutline="true"
+            android:elevation="10dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/baklavav"
+            app:layout_constraintBottom_toTopOf="@+id/chipGroupItemFoodPriceInDetail"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toolbarDetail"
+            tools:targetApi="s" />
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/chipGroupItemFoodPriceInDetail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="-16dp"
+            android:background="@drawable/shape_image_chip"
+            android:elevation="10dp"
+            android:paddingStart="10dp"
+            android:paddingTop="5dp"
+            android:paddingEnd="10dp"
+            android:paddingBottom="5dp"
+            app:chipSpacingHorizontal="5dp"
+            app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent">
+
+
+            <TextView
+                android:id="@+id/textViewChipItemFoodPriceInDetail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/adamina"
+                android:text="@{Integer.toString(foodDetailObject.yemekFiyat)}"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/adamina"
+                android:text="@string/dolar"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+        </com.google.android.material.chip.ChipGroup>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

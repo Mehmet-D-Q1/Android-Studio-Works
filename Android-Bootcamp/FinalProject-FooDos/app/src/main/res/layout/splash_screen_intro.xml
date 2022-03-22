@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/shape_detail_1"
+    tools:context=".SplashScreenIntro">
+
+    <ImageView
+        android:id="@+id/imageViewSplash"
+        android:layout_width="312dp"
+        android:layout_height="309dp"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/shape_image_detail"
+        android:elevation="10dp"
+        android:src="@drawable/foodos_logo"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewFoodos"
+        android:layout_width="150dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="40dp"
+        android:fontFamily="@font/adamina"
+        android:text="FooDos"
+        android:textColor="#6D8EAA"
+        android:textSize="40sp"
+        android:textStyle="bold|italic"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewWelcome" />
+
+    <TextView
+        android:id="@+id/textViewWelcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:fontFamily="@font/adamina"
+        android:text="Welcome To"
+        android:textColor="#6D8EAA"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewSplash" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

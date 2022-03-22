@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="foodObjectInCard"
+            type="com.example.finalproject_foodos.entity.FoodsInBasket" />
+        <variable
+            name="adapterCard"
+            type="com.example.finalproject_foodos.adapter.AdapterCard" />
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/item_card_Card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="5dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#E8E8E8">
+
+                <TextView
+                    android:id="@+id/textViewQuantityInCard"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:fontFamily="@font/adamina"
+                    android:text="@{Integer.toString(foodObjectInCard.yemekSiparisAdet)}"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/textViewTextFoodTotalPriceInCard"
+                    app:layout_constraintEnd_toEndOf="@+id/buttonDeleteInCard" />
+
+                <ImageView
+                    android:id="@+id/imageViewFoodImageInCard"
+                    android:layout_width="75dp"
+                    android:layout_height="75dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="@drawable/shape_image"
+                    android:clipToOutline="true"
+                    android:adjustViewBounds="true"
+                    android:elevation="5dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:srcCompat="@drawable/baklavav"
+                    tools:targetApi="s" />
+
+                <TextView
+                    android:id="@+id/textViewTextFoodPriceInCard"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/adamina"
+                    android:hapticFeedbackEnabled="false"
+                    android:text="Price:"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toStartOf="@+id/textViewFoodNameInCard"
+                    app:layout_constraintTop_toBottomOf="@+id/textViewFoodNameInCard" />
+
+                <TextView
+                    android:id="@+id/textViewFoodPriceInCard"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:fontFamily="@font/adamina"
+                    android:hapticFeedbackEnabled="false"
+                    android:text="@{Integer.toString(foodObjectInCard.yemekFiyat)}"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/textViewTextFoodPriceInCard"
+                    app:layout_constraintStart_toEndOf="@+id/textViewTextFoodPriceInCard"
+                    app:layout_constraintTop_toTopOf="@+id/textViewTextFoodPriceInCard" />
+
+                <TextView
+                    android:id="@+id/textViewFoodTotalPriceInCard"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:fontFamily="@font/adamina"
+                    android:hapticFeedbackEnabled="false"
+                    android:text="@{Integer.toString(foodObjectInCard.yemekFiyat*foodObjectInCard.yemekSiparisAdet)}"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/textViewTextFoodTotalPriceInCard"
+                    app:layout_constraintStart_toEndOf="@+id/textViewTextFoodTotalPriceInCard"
+                    app:layout_constraintTop_toTopOf="@+id/textViewTextFoodTotalPriceInCard" />
+
+                <TextView
+                    android:id="@+id/textViewFoodNameInCard"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="4dp"
+                    android:fontFamily="@font/adamina"
+                    android:hapticFeedbackEnabled="false"
+                    android:text="@{foodObjectInCard.yemekAdi}"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toEndOf="@+id/imageViewFoodImageInCard"
+                    app:layout_constraintTop_toTopOf="@+id/imageViewFoodImageInCard" />
+
+                <TextView
+                    android:id="@+id/textViewFoodPriceTLInCard"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/adamina"
+                    android:hapticFeedbackEnabled="false"
+                    android:text="@string/dolar"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/textViewFoodPriceInCard"
+                    app:layout_constraintStart_toEndOf="@+id/textViewFoodPriceInCard"
+                    app:layout_constraintTop_toTopOf="@+id/textViewFoodPriceInCard" />
+
+                <Button
+                    android:id="@+id/buttonDeleteInCard"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:width="25dp"
+                    android:height="25dp"
+                    android:background="#00FFFFFF"
+                    android:backgroundTint="#E8E8E8"
+                    android:includeFontPadding="false"
+                    android:insetLeft="0dp"
+                    android:insetTop="0dp"
+                    android:insetRight="0dp"
+                    android:insetBottom="0dp"
+                    android:maxWidth="0dp"
+                    android:minWidth="0dp"
+                    android:minHeight="0dp"
+                    android:nestedScrollingEnabled="false"
+                    android:padding="0dp"
+                    android:textAlignment="center"
+                    app:icon="@drawable/delete_icon"
+                    app:iconGravity="textStart"
+                    app:iconPadding="0dp"
+                    app:iconSize="30dp"
+                    app:iconTint="#5A82A1"
+                    app:layout_constrainedWidth="false"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textViewTextFoodTotalPriceInCard"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginBottom="4dp"
+                    android:fontFamily="@font/adamina"
+                    android:hapticFeedbackEnabled="false"
+                    android:text="Card Price:"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/imageViewFoodImageInCard"
+                    app:layout_constraintStart_toEndOf="@+id/imageViewFoodImageInCard" />
+
+                <TextView
+                    android:id="@+id/textViewTextFoodTotalPriceInCard2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp"
+                    android:fontFamily="@font/adamina"
+                    android:hapticFeedbackEnabled="false"
+                    android:text="Quantity:"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/textViewQuantityInCard"
+                    app:layout_constraintEnd_toStartOf="@+id/textViewQuantityInCard"
+                    app:layout_constraintTop_toTopOf="@+id/textViewQuantityInCard" />
+
+                <TextView
+                    android:id="@+id/textViewFoodTotalPriceTLInCard"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/adamina"
+                    android:hapticFeedbackEnabled="false"
+                    android:text="@string/dolar"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/textViewTextFoodTotalPriceInCard"
+                    app:layout_constraintStart_toEndOf="@+id/textViewFoodTotalPriceInCard"
+                    app:layout_constraintTop_toTopOf="@+id/textViewTextFoodTotalPriceInCard" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+
+
+    </LinearLayout>
+</layout>

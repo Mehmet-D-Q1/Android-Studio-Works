@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/shape_login"
+    android:overScrollMode="always"
+    android:orientation="vertical"
+    tools:context=".authentication.LoginFragment">
+
+
+    <TextView
+        android:id="@+id/textViewRegister2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="92dp"
+        android:background="@drawable/shape_login_register"
+        android:backgroundTint="@color/BottomNav_clickedcolor"
+        android:elevation="20dp"
+        android:includeFontPadding="false"
+        android:padding="15dp"
+        android:text="Login"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        app:flow_horizontalAlign="center"
+        app:flow_verticalAlign="center"
+        app:layout_constraintEnd_toEndOf="@+id/textInputMailInLogin"
+        app:layout_constraintStart_toStartOf="@+id/textInputMailInLogin"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputMailInLogin"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="200dp"
+        android:layout_marginEnd="50dp"
+        android:elevation="20dp"
+        android:hint="Mail"
+        android:textColorHint="@color/white"
+        app:boxBackgroundColor="@color/BottomNav_clickedcolor"
+        app:boxCornerRadiusBottomEnd="10dp"
+        app:boxCornerRadiusBottomStart="10dp"
+        app:boxCornerRadiusTopEnd="10dp"
+        app:boxCornerRadiusTopStart="10dp"
+        app:boxStrokeColor="@color/white"
+        app:boxStrokeWidth="0dp"
+        app:counterEnabled="true"
+        app:counterMaxLength="20"
+        app:endIconMode="clear_text"
+        app:errorEnabled="true"
+        app:helperText="Required"
+        app:helperTextTextColor="#FF0000"
+        app:hintTextColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:startIconDrawable="@drawable/mail"
+        app:startIconTint="@color/white">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputPasswordInLogin"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="50dp"
+
+        android:elevation="20dp"
+        android:hint="Password"
+        android:textColorHint="@color/white"
+        app:boxBackgroundColor="@color/backgroundTint"
+        app:boxCornerRadiusBottomEnd="10dp"
+        app:boxCornerRadiusBottomStart="10dp"
+        app:boxCornerRadiusTopEnd="10dp"
+        app:boxCornerRadiusTopStart="10dp"
+        app:boxStrokeColor="@color/white"
+        app:boxStrokeWidth="0dp"
+        app:counterEnabled="true"
+        app:counterMaxLength="20"
+        app:endIconMode="password_toggle"
+        app:endIconTint="@color/white"
+        app:helperText="Required"
+        app:errorEnabled="true"
+        app:helperTextTextColor="#FF0000"
+        app:hintTextColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputMailInLogin"
+        app:startIconDrawable="@drawable/password"
+        app:startIconTint="@color/white">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:textColor="@color/white"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/buttonLoginInLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="25dp"
+        android:elevation="20dp"
+        android:text="Login"
+        app:backgroundTint="@color/BottomNav_clickedcolor"
+        app:cornerRadius="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/textInputPasswordInLogin" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/buttonRegisterInLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="20dp"
+        android:text="Register"
+        app:backgroundTint="#ACACAC"
+        app:cornerRadius="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/buttonLoginInLogin"
+        app:layout_constraintEnd_toEndOf="@+id/textInputPasswordInLogin"
+        app:layout_constraintTop_toTopOf="@+id/buttonLoginInLogin" />
+
+    <TextView
+        android:id="@+id/textViewForgotPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Forgot Password?"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/checkBoxRememberMe"
+        app:layout_constraintEnd_toEndOf="@+id/textInputPasswordInLogin"
+        app:layout_constraintTop_toTopOf="@+id/checkBoxRememberMe" />
+
+    <CheckBox
+        android:id="@+id/checkBoxRememberMe"
+        style="@style/CheckboxStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Remember me"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="@+id/textInputPasswordInLogin"
+        app:layout_constraintTop_toBottomOf="@+id/textInputPasswordInLogin" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

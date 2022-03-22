@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/splashScreenIntro">
+    <fragment
+        android:id="@+id/foodsHomeFragment"
+        android:name="com.example.finalproject_foodos.fragments.FoodsHomeFragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_foods_home" >
+        <action
+            android:id="@+id/action_foodsHomeFragment_to_foodsDetailFragment"
+            app:destination="@id/foodsDetailFragment"
+            app:popUpTo="@id/foodsHomeFragment"
+            app:popUpToInclusive="false" />
+        <action
+            android:id="@+id/action_foodsHomeFragment_to_foodsFavoriteFragment"
+            app:destination="@id/foodsFavoriteFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_foodsHomeFragment_to_foodsCardFragment"
+            app:destination="@id/foodsCardFragment"
+            app:popUpTo="@id/foodsHomeFragment"
+            app:popUpToInclusive="false" />
+    </fragment>
+    <fragment
+        android:id="@+id/foodsDetailFragment"
+        android:name="com.example.finalproject_foodos.fragments.FoodsDetailFragment"
+        android:label="fragment_foods_detail"
+        tools:layout="@layout/fragment_foods_detail" >
+        <action
+            android:id="@+id/action_foodsDetailFragment_to_foodsCardFragment"
+            app:destination="@id/foodsCardFragment"
+            app:popUpTo="@id/foodsHomeFragment"
+            app:popUpToInclusive="false" />
+        <argument
+            android:name="foodObjectFromHome"
+            app:argType="com.example.finalproject_foodos.entity.Foods" />
+        <action
+            android:id="@+id/action_foodsDetailFragment_to_foodsHomeFragment"
+            app:destination="@id/foodsHomeFragment"
+            app:popUpTo="@id/foodsHomeFragment" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/foodsCardFragment"
+        android:name="com.example.finalproject_foodos.fragments.FoodsCardFragment"
+        android:label="fragment_foods_card"
+        tools:layout="@layout/fragment_foods_card" />
+    <fragment
+        android:id="@+id/foodsFavoriteFragment"
+        android:name="com.example.finalproject_foodos.fragments.FoodsFavoriteFragment"
+        android:label="fragment_foods_favorite"
+        tools:layout="@layout/fragment_foods_favorite" />
+    <fragment
+        android:id="@+id/splashScreenIntro"
+        android:name="com.example.finalproject_foodos.SplashScreenIntro"
+        android:label="activity_splash_screen_intro"
+        tools:layout="@layout/splash_screen_intro" >
+        <action
+            android:id="@+id/action_splashScreenIntro_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:popUpTo="@id/splashScreenIntro"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_splashScreenIntro_to_profileFragment"
+            app:destination="@id/profileFragment"
+            app:popUpTo="@id/splashScreenIntro"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.finalproject_foodos.authentication.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_registerFragment"
+            app:destination="@id/registerFragment"
+            app:popUpTo="@id/registerFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_loginFragment_to_foodsHomeFragment"
+            app:destination="@id/foodsHomeFragment"
+            app:popUpTo="@id/foodsFavoriteFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_loginFragment_to_profileFragment"
+            app:destination="@id/profileFragment"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.example.finalproject_foodos.authentication.RegisterFragment"
+        android:label="fragment_register"
+        tools:layout="@layout/fragment_register" >
+        <action
+            android:id="@+id/action_registerFragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.finalproject_foodos.authentication.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/action_profileFragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:popUpTo="@id/profileFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+</navigation>
