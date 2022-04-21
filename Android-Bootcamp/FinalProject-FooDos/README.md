@@ -2,25 +2,20 @@ Android Bootcamp Bitirme Projesi - FOODOS
 
 Projede Kullanılan Teknolojiler 
 
-RecyclerView-Cardview
+- RecyclerView-Cardview
 
-Databinding
+- Databinding
 
-Jetpack Navigation Component
+- Jetpack Navigation Component
 
-Retrofit
+- Retrofit
 
-Picasso
+- Picasso
 
-Firebase Authentication
+- Firebase Authentication
 
-Room Database
+- Room Database
 
-MVVM
-###Lists
+- MVVM
 
-####Unordered list (-)
 
-- Item A
-- Item B
-- Item C
