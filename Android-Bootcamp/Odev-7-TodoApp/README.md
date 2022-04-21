@@ -1,15 +1,20 @@
-Android Bootcamp için yapmış olduğum ToDo app ödevi.
+# Android Bootcamp için yapmış olduğum ToDo app ödevi:
 
-MVVM(ViewModel - LiveData)
+## Projede Kullanılan Teknolojiler 
 
-Databinding
+- RecyclerView-Cardview
 
-RecyclerView
+- Databinding
 
-Navigation Component
+- Jetpack Navigation Component
 
-RoomDatabase
+- Room Database
+
+- MVVM
+
+## Proje Görselleri
+
+<img src="https://user-images.githubusercontent.com/83539143/156785719-8bd49c8f-48db-487b-91ce-d95c0247bdbd.png" width="250" height="475">
 
 
 
-![TodoApp](https://user-images.githubusercontent.com/83539143/156785719-8bd49c8f-48db-487b-91ce-d95c0247bdbd.png)
