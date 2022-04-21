@@ -1,6 +1,6 @@
-Android Bootcamp Bitirme Projesi - FOODOS
+# Android Bootcamp Bitirme Projesi - FOODOS
 
-###Projede Kullanılan Teknolojiler 
+## Projede Kullanılan Teknolojiler 
 
 - RecyclerView-Cardview
 
