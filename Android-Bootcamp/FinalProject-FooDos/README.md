@@ -1,3 +1,5 @@
+Android Bootcamp Bitirme Projesi - FOODOS
+
 Projede Kullanılan Teknolojiler 
 
 RecyclerView-Cardview
@@ -15,4 +17,10 @@ Firebase Authentication
 Room Database
 
 MVVM
+###Lists
 
+####Unordered list (-)
+
+- Item A
+- Item B
+- Item C
