@@ -20,7 +20,7 @@
 
 ## Proje Görselleri
 
-<img src="https://user-images.githubusercontent.com/83539143/164469495-cc638e49-941f-4a31-82ba-c90f1bbd118b.PNG" width="250" height="475">
+<img src="https://user-images.githubusercontent.com/83539143/164469495-cc638e49-941f-4a31-82ba-c90f1bbd118b.PNG" width="250" height="475"> 
 <img src="https://user-images.githubusercontent.com/83539143/164469555-706d3f9f-0bd7-4248-92a6-808811a15b3e.png" width="250" height="475">
 <img src="https://user-images.githubusercontent.com/83539143/164469596-419681e1-ecba-4401-a204-31c3b879c176.png" width="250" height="475">
 <img src="https://user-images.githubusercontent.com/83539143/164469707-85160860-30d2-441b-917d-9b12e17cd9a6.png" width="250" height="475">
