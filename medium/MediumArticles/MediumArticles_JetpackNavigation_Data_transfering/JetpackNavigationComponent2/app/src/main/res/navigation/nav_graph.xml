@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.example.jetpacknavigationcomponent.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/action_mainFragment_to_firstFragment"
+            app:destination="@id/firstFragment"
+            app:popUpTo="@id/mainFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_mainFragment_to_AFragment"
+            app:destination="@id/AFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/firstFragment"
+        android:name="com.example.jetpacknavigationcomponent.FirstFragment"
+        android:label="fragment_first"
+        tools:layout="@layout/fragment_first" >
+        <action
+            android:id="@+id/action_firstFragment_to_secondFragment"
+            app:destination="@id/secondFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/secondFragment"
+        android:name="com.example.jetpacknavigationcomponent.SecondFragment"
+        android:label="fragment_second"
+        tools:layout="@layout/fragment_second" >
+        <action
+            android:id="@+id/action_secondFragment_to_lastFragment"
+            app:destination="@id/lastFragment"
+            app:popUpTo="@id/firstFragment" />
+        <argument
+            android:name="namefromFirst0"
+            app:argType="string"
+            android:defaultValue="Veri Yok!" />
+    </fragment>
+    <fragment
+        android:id="@+id/AFragment"
+        android:name="com.example.jetpacknavigationcomponent.AFragment"
+        android:label="fragment_a"
+        tools:layout="@layout/fragment_a" >
+        <action
+            android:id="@+id/action_AFragment_to_BFragment"
+            app:destination="@id/BFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/BFragment"
+        android:name="com.example.jetpacknavigationcomponent.BFragment"
+        android:label="fragment_b"
+        tools:layout="@layout/fragment_b" >
+        <action
+            android:id="@+id/action_BFragment_to_lastFragment"
+            app:destination="@id/lastFragment"
+            app:popUpTo="@id/mainFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/lastFragment"
+        android:name="com.example.jetpacknavigationcomponent.LastFragment"
+        android:label="fragment_last"
+        tools:layout="@layout/fragment_last" >
+        <argument
+            android:name="nameFromFirst"
+            app:argType="string"
+            android:defaultValue='Veri Yok!' />
+        <argument
+            android:name="passwordFromSecond"
+            app:argType="integer"
+            android:defaultValue="0"
+            />
+    </fragment>
+</navigation>
