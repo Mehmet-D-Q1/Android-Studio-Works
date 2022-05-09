@@ -1,3 +1,7 @@
+Jetpack Navigation Component 1.Kısım 
+Sayfalar Arası Geçiş
+
+https://medium.com/@mehmetdogan37/jetpack-navigation-component-1-k%C4%B1s%C4%B1m-7ff40dd3346d
 
 Senaryolar:
 
